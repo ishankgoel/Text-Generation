@@ -1,4 +1,4 @@
-from model import Model
+from txtgen.model import Model
 import sys
 import numpy
 from keras.utils import np_utils
