@@ -7,3 +7,4 @@ else
 fi
 docker build -f Dockerfile -t goel$TRAVIS_REPO_SLUG:$TAG .
 docker push goel$TRAVIS_REPO_SLUG:$TAG
+#Update
