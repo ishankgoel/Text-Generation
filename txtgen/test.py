@@ -4,7 +4,7 @@ import numpy
 from keras.utils import np_utils
 
 
-filename = "thetimemachine.txt"
+filename = "./thetimemachine.txt"
 raw_text = open(filename, 'r', encoding='utf-8').read()
 raw_text = raw_text.lower()
 # create mapping of unique chars to integers, and a reverse mapping

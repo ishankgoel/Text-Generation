@@ -31,5 +31,5 @@ class Model(object):
         self.model.fit(X, y, epochs=self.epochs, batch_size=self.batch_size, callbacks=callbacks_list)
 
     def test(self, filename):
-        self.model.load_weights("checkpoint/"+filename)
+        self.model.load_weights("./checkpoint/"+filename)
         
