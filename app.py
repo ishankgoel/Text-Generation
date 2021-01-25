@@ -1,6 +1,8 @@
 import os
 from fastapi import FastAPI
 from txtgen import test
+import sys
+sys.path.append('./txtgen')
 
 app = FastAPI()
 @app.get("/")
