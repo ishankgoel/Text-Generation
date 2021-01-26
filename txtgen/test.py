@@ -37,14 +37,15 @@ y = np_utils.to_categorical(dataY)
 input_shape = (X.shape[1], X.shape[2])
 output_shape = y.shape[1]
 model = Model(input_shape, output_shape, 20, 128)
-model.test(filename="weights-improvement-20-2.1315.hdf5")
-start = numpy.random.randint(0, len(dataX)-1)
-pattern = dataX[start]
-print ("Seed:")
-print ("\"", ''.join([int_to_char[value] for value in pattern]), "\"")
+model.test(filename="weights-improvement-16-1.3230.hdf5")
+# print ("Seed:")
+# print ("\"", ''.join([int_to_char[value] for value in pattern]), "\"")
 # generate characters
 def main():
 	final = ''
+	start = numpy.random.randint(0, len(dataX)-1)
+	pattern = dataX[start]
+
 	for i in range(1000):
 		x = numpy.reshape(pattern, (1, len(pattern), 1))
 		x = x / float(n_vocab)
@@ -57,4 +58,4 @@ def main():
 		pattern.append(index)
 		pattern = pattern[1:len(pattern)]
 	return final
-print(main())
+#print(main())
